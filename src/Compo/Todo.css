@@ -1,0 +1,79 @@
+u{
+    color: yellow;
+}
+.container{
+    width: 100vw;
+    background: linear-gradient(270deg, #064621, #6a0652);
+    text-shadow: 1px 1px 7px;
+    border: 2px solid rgb(164, 238, 18);
+    border-radius: 10px;
+    box-shadow: 0 0 5px 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+li{
+    list-style: none;
+    border: 1px solid white;
+    min-width: 40vw;  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family:'Courier New', Courier, monospace;
+    color: white;
+    border-radius: 10px;
+    transition: 1s;
+    padding: 2px;
+    font-size: large;
+}
+
+li:hover{
+    box-shadow: 0 5px 5px 0 white inset, 0 5px 5px 0 white
+}
+.delBtn{
+    cursor: pointer;
+}
+.editBtn{
+    cursor: pointer;
+}
+
+.button{
+    border: 2px solid #15f4ee ;
+    position: relative;
+    width: 120px;
+    padding: 2px;
+    font-weight: bold;
+    background: none;
+    cursor: pointer;
+    color: aqua;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.button:hover{
+    box-shadow: 0 5px 5px 0 #15f4ee inset, 0 5px 5px 0 #15f4ee;
+}
+
+.addButton{
+    border: 2px solid green;
+    position: relative;
+    width: 70px;
+    padding: 3px;
+    font-weight: bold;
+    background: none;
+    cursor: pointer;
+    color: aqua;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.addButton:hover{
+    box-shadow: 0 5px 5px 0 #15f4ee inset, 0 5px 5px 0 #15f4ee;
+}
+
+input{
+    border-bottom: 4px solid green;
+    border-radius: 10px;
+    padding: 3px;
+    background: linear-gradient(270deg, #bee6ce, #e9b8de);
+}
