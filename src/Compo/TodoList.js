@@ -16,10 +16,12 @@ function TodoList() {
     }
 
     const handleDelete = (index) => {
-        let newTodo = todos.filter((idx, x)=>{
-            return x !== index
-        })
-        setTodos(newTodo)
+        // let newTodo = todos.filter((idx, x)=>{
+        //     return x !== index
+        // })
+        let tempTodo = [...todos]
+        tempTodo.splice(index, 1)
+        setTodos(tempTodo)
     }
   return (
     <div className='todo'>
@@ -28,14 +30,16 @@ function TodoList() {
             <input type="text" value={item} onChange={handleChange}/>
             <button className='btn btn-success btn-sm mx-2' onClick={addTodo}>Add</button>
         </div>
+        {todos.length === 0 && <h4>No Pending Task</h4> }
         {todos.map((todo, i)=>{
             return (
                 <div className="container" key={i}>
-                <div>
-                    <input type="text" value={todo} />
-                    <FaEdit className='text-warning'/>
-                    <MdDelete className='text-danger' onClick={()=>handleDelete(i)}/>
-                </div>
+                    <div>
+                        <input type="text" value={todo} />
+                        <FaEdit className='text-warning'/>
+                        <MdDelete className='text-danger' onClick={()=>handleDelete(i)}/>
+                        <input type="checkbox" />
+                    </div>
                 </div>
             )
         })}

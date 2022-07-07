@@ -61,12 +61,9 @@ export const Todo = () => {
         setTodo([])
     }
 
-   
-
     useEffect(() => {
       localStorage.setItem('lists', JSON.stringify(todo))
     }, [todo])
-    
 
   return (
     <div className="todoArea">
@@ -87,7 +84,7 @@ export const Todo = () => {
             </ul>
         </div>
         <button className="button my-2" onClick={removeAll}>Remove All</button>
-    </div>
+        </div>
     </div>
   )
 }
